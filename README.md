@@ -98,6 +98,7 @@ Software requirements:
 * **/PCI_ID** - option required for Intel/Broadcom 10Gb/40Gb LAN Controllers (without this option, driver set too small size of memory buffer for 10Gb+ cards)
 
 Optional:
+* **/BUSPARAMS=4.25.8** - When you have more than 1 netcard (also PCI/PCIe WLAN), look in Device Manager and search there for your used lan card, here for example PCI-Bus 4, Device 25, Function 8. This option force to use only this lan card. Without this option, debugging will not work! The OS boots normally, in the Device Manager lan card is in Other devices section with normal PCI Vendor Device ID (not DEAD BEEF) and the WLAN card is not visible.
 
 * **/BREAK** - instant stop at INT3 opcode, if LAN card was not intialized properly by kdnet, Target PC will be rebooted
 
@@ -106,8 +107,6 @@ Optional:
 * **/W2003** - set for Windows 2003 or mixed OS like "Windows XP + Windows 2003's hal.dll"
 
 * **/PCI_ID** - search LAN Card by VEN_ID & DEV_ID, for example Realtek PCI-e LAN card in Device Manager detected as PCI\VEN_10EC&DEV_8136, to skip autodetect and use this card set /PCI_ID=10EC8136 (must be 8 chars !)
-
-* **/BUSPARAMS=4.25.8** - obsolete option (When you have more than 1 netcard, look in Device Manager and search there for your used lan card, here for example PCI-Bus 4, Device 25, Function 8. This option force to use only this netcard)
 
 8) Disable firewall at Host on choosen UDP Port
 
