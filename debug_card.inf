@@ -1,0 +1,21 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGUID={4D36E971-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+DriverVer=07/12/2025, 1.1
+
+[Manufacturer]
+%ManufacturerName%=Gelip
+
+[Gelip]
+%DeviceName%=dummy, PCI\VEN_DEAD&DEV_BEEF
+
+[dummy]
+
+[dummy.Services]
+AddService = ,2
+
+[Strings]
+ManufacturerName="Gelip"
+DeviceName="Debug PCI Netcard"
